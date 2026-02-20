@@ -39,7 +39,7 @@
     },
     "initializeCommand": ".devcontainer/initCommand.sh",
     "onCreateCommand": ".devcontainer/onCreate.sh",
-    "postCreateCommand": ".devcontainer/postCreate.sh && ${containerWorkspaceFolder}/eda-telemetry-lab/init.sh",
+    "postCreateCommand": ".devcontainer/postCreate.sh && ${containerWorkspaceFolder}/init.sh",
     "postAttachCommand": ".devcontainer/postAttach.sh",
     "containerEnv": {
         "EDA_PORT": "9443",
@@ -58,8 +58,8 @@
         }
     },
     "hostRequirements": {
-        "cpus": 8,
-        "memory": "32gb",
+        "cpus": 4,
+        "memory": "16gb",
         "storage": "64gb"
     },
     "privileged": true,
