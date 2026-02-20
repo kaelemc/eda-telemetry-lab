@@ -45,7 +45,8 @@
         "EDA_PORT": "9443",
         "TRY_EDA_OVERRIDES_FILE": "${containerWorkspaceFolder}/.devcontainer/overrides.mk",
         "TRY_EDA_KPT_SETTERS_FILE": "/eda-codespaces/codespaces-4vcpu-kpt-setters.yaml",
-        "K9S_SKIN": "dracula"
+        "K9S_SKIN": "dracula",
+        "NO_TOPO": "foo"
     },
     "forwardPorts": [
         9443
