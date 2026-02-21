@@ -9,7 +9,7 @@ T_START=$(date +%s)
 # to reduce the number of jobs:
 PARALLEL_JOBS=$(($(nproc) - 1))
 # PARALLEL_JOBS=$(nproc)
-docker exec k3d-eda-demo-server-0 sh -c "cat /opt/images.txt | xargs -P $PARALLEL_JOBS -I {} sh -c 'echo \"[\$(date +%H:%M:%S)] Pulling image {}\"; crictl pull {} >/dev/null 2>&1'"
+docker exec k3d-eda-demo-server-0 sh -c "cat /opt/images.txt | xargs -P 2 -I {} sh -c 'echo \"[\$(date +%H:%M:%S)] Pulling image {}\"; crictl pull {} >/dev/null 2>&1'"
 
 T_END=$(date +%s)
 log "Images pulled. Took $((T_END-T_START)) seconds."
